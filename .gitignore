@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+report
+**.xml
+yarn.lock
+.DS_Store

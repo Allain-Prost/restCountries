@@ -1,0 +1,18 @@
+{
+  "name": "restcountries",
+  "version": "1.0.0",
+  "description": "Projeto para auxiliar nos estudos ",
+  "main": "index.js",
+  "author": "Allain Prost",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "pactum": "^3.3.2"
+  },
+  "scripts": {
+    "producao": "mocha ./tests/**/**.test.js"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
+}
