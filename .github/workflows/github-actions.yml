@@ -12,10 +12,11 @@ jobs:
       - run: npm run producao
   
   deploy-dev:
-    needs: build
+    runs-on: ubuntu-latest
     environment: 
       name: dev
       url: 'allain.com'
+    needs: build
     steps:
       - name: Execute os testes do ambiente de desenvolvimento
         run: npm run producao
