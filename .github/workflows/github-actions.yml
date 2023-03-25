@@ -6,11 +6,12 @@ jobs:
       name: dev
       url: 'allain.com'
     steps:
-      - uses: actions/checkout@v3
+      - name: instalar o nodeJs
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
       - name: Execute os testes do ambiente de desenvolvimento
-        run: npm run producao
+      - run: npm install
+      - run: npm run producao
     
       
