@@ -14,5 +14,35 @@ jobs:
         run: npm install
       - name: Executando os testes de desenvolvimento
         run: npm run producao
+
+  deploy-hmg:
+    runs-on: ubuntu-latest
+    environment: 
+      name: hmg
+      url: 'www.allainprosthmg.com.br'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Executando os testes de homologação
+        run: npm run producao
+
+  deploy-prd:
+    runs-on: ubuntu-latest
+    environment: 
+      name: prd
+      url: 'www.allainprostprd.com.br'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Executando os testes de produção
+        run: npm run producao
     
       
