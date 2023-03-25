@@ -10,3 +10,14 @@ jobs:
           node-version: '14'
       - run: npm install 
       - run: npm run producao
+  
+  deploy-dev:
+    needs: build
+    environment: 
+      name: dev
+      url: 'allain.com'
+    steps:
+      - name: Execute os testes do ambiente de desenvolvimento
+        run: npm run producao
+    
+      
