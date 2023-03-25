@@ -1,5 +1,7 @@
 const countrys = {
-    brazil: "brazil"
+    brazil: "brazil",
+    argentina: "Argentina",
+    paisIncorreto: "brazill"
 }
 
 module.exports = {
