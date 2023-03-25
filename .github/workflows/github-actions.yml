@@ -20,6 +20,7 @@ jobs:
     environment: 
       name: hmg
       url: 'www.allainprosthmg.com.br'
+    needs: [deploy-dev]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -35,6 +36,7 @@ jobs:
     environment: 
       name: prd
       url: 'www.allainprostprd.com.br'
+    needs: [deploy-hmg]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
