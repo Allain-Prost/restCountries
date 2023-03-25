@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: dev
-      url: 'allain.com'
+      url: 'www.allainprost.com.br'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
