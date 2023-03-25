@@ -1,13 +1,11 @@
 on: [push]
 jobs:
-
   deploy-dev:
     runs-on: ubuntu-latest
     environment: 
       name: dev
       url: 'allain.com'
     steps:
-      - name: Instalando o node
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
