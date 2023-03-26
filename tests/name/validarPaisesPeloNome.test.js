@@ -11,7 +11,7 @@ it('[TC-01] - Buscar país pelo nome correto', async () => {
 })
 
 it('[TC-02] - Buscar país pelo nome incorreto', async () => {
-    let { json } = await getCountryByName(countrys.paisIncorreto, statusCode.notFound)
+    let { json } = await getCountryByName(countrys.argentina, statusCode.notFound)
     assert.equal(json.status, '404')
     assert.equal(json.message, 'Not Found')
 })
